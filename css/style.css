@@ -1,0 +1,44 @@
+#loading-round {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    background-color: rgb(153, 65, 65);
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.load-frame {
+    width: 138px;
+    height: 138px;
+    background-color: #fff;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #00a1ff;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0% {
+        stroke-dashoffset: 440;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    50.1%{
+        stroke-dashoffset: 880;
+    }
+}
+
