@@ -1,8 +1,11 @@
 #loading-round {
     width: 150px;
-    height: 200px;
+    height: 175px;
     display: flex;
-    background-color: rgb(153, 65, 65);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(153, 65, 65); */
     padding: 6px;
     box-sizing: border-box;
 }
@@ -15,6 +18,7 @@
 
 svg {
     position: relative;
+    top: -11px;
     width: 150px;
     height: 150px;
 }
@@ -26,11 +30,37 @@ svg circle {
     stroke-width: 10;
     stroke: #00a1ff;
     stroke-linecap: round;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    animation: animate 4s linear infinite;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    transition: ease-out .7s;
+    transform-origin:center;
+    transform: rotate(-90deg);
 }
-@keyframes animate {
+
+.percent-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+    bottom: 107px;
+    font-family: system-ui;
+}
+
+.currentValue {
+    display: flex;
+    justify-content: center;
+}
+
+#value {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #848484;
+    outline: none;
+}
+
+/* @keyframes animate {
     0% {
         stroke-dashoffset: 440;
     }
@@ -40,5 +70,5 @@ svg circle {
     50.1%{
         stroke-dashoffset: 880;
     }
-}
+} */
 
