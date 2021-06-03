@@ -25,9 +25,7 @@ elements.value.addEventListener('keydown', (item) => {
         item.preventDefault()
         console.log(item.target.value);
         console.log();
-
-        setProgress(item.target.value);
-        elements.percentTitle.innerText = `${item.target.value}%`
-
     }
+    setProgress(item.target.value);
+    elements.percentTitle.innerText = `${item.target.value}%`
 })
