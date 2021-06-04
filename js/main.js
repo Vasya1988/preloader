@@ -46,6 +46,7 @@ export default function runPercent() {
                 //     console.log(item.target.value);
                 //     console.log();
 
+<<<<<<< HEAD
                 //     setProgress(item.target.value);
                 //     elements.percentTitle.innerText = `${item.target.value}%`;
                 // }
@@ -72,3 +73,14 @@ export default function runPercent() {
     render()
 }
 runPercent()
+=======
+elements.value.addEventListener('keydown', (item) => {
+    if (item.keyCode === 13) {
+        item.preventDefault()
+        console.log(item.target.value);
+        console.log();
+    }
+    setProgress(item.target.value);
+    elements.percentTitle.innerText = `${item.target.value}%`
+})
+>>>>>>> eb3adfe9166864c3ef4ab1c767c549b91d6af216
